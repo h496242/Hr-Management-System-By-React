@@ -104,56 +104,9 @@ const App = () => {
                     }
                   />
                   <Route path="employees" element={<Employees />} />
-                  <Route
-                    path="attendance"
-                    element={
-                      <PlaceholderPage
-                        title="Attendance"
-                        description="Track and manage employee attendance"
-                        features={[
-                          "Mark daily attendance",
-                          "View attendance reports",
-                          "Calendar view",
-                          "Filter by department and date range",
-                          "Auto-populate absent employees",
-                        ]}
-                      />
-                    }
-                  />
-                  <Route
-                    path="salary"
-                    element={
-                      <PlaceholderPage
-                        title="Salary Management"
-                        description="Manage employee salaries and payroll"
-                        features={[
-                          "Set base salaries",
-                          "Add allowances and bonuses",
-                          "Calculate deductions",
-                          "Generate monthly salary sheets",
-                          "Export salary reports (PDF/CSV)",
-                          "Approval workflow for payments",
-                        ]}
-                      />
-                    }
-                  />
-                  <Route
-                    path="leave"
-                    element={
-                      <PlaceholderPage
-                        title="Leave Management"
-                        description="Handle employee leave requests and approvals"
-                        features={[
-                          "Employee leave applications",
-                          "HR/Admin approval system",
-                          "Track leave balances",
-                          "Multiple leave types (Casual, Sick, Annual)",
-                          "Leave calendar view",
-                          "Automated leave deductions",
-                        ]}
-                      />
-                    }
-                  />
+                  <Route path="attendance" element={<Attendance />} />
+                  <Route path="salary" element={<Salary />} />
+                  <Route path="leave" element={<Leave />} />
                   <Route
                     path="interviews"
                     element={
