@@ -8,6 +8,19 @@ import {
   handleGetDepartments,
   handleGetDashboardStats,
 } from "./routes/users";
+import { handleGetAttendance, handleMarkAttendance } from "./routes/attendance";
+import {
+  handleGetSalaries,
+  handleGenerateSalary,
+  handleApproveSalary,
+  handlePaySalary,
+} from "./routes/salary";
+import {
+  handleGetCompanyLeaves,
+  handleCreateLeaveRequest,
+  handleUpdateLeaveStatus,
+  handleGetEmployeeLeaves,
+} from "./routes/leave";
 
 export function createServer() {
   const app = express();
@@ -34,6 +47,22 @@ export function createServer() {
   app.post("/api/users", handleCreateUser);
   app.get("/api/departments", handleGetDepartments);
   app.get("/api/dashboard/stats", handleGetDashboardStats);
+
+  // Attendance routes
+  app.get("/api/attendance", handleGetAttendance);
+  app.post("/api/attendance/mark", handleMarkAttendance);
+
+  // Salary routes
+  app.get("/api/salary", handleGetSalaries);
+  app.post("/api/salary/generate", handleGenerateSalary);
+  app.put("/api/salary/:id/approve", handleApproveSalary);
+  app.put("/api/salary/:id/pay", handlePaySalary);
+
+  // Leave management routes
+  app.get("/api/leave/company", handleGetCompanyLeaves);
+  app.post("/api/leave/request", handleCreateLeaveRequest);
+  app.put("/api/leave/:id/status", handleUpdateLeaveStatus);
+  app.get("/api/leave/employee/:employeeId", handleGetEmployeeLeaves);
 
   return app;
 }
