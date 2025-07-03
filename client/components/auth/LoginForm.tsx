@@ -129,7 +129,7 @@ export function LoginForm({ onLoginSuccess }: LoginFormProps) {
             <p>Demo Accounts:</p>
             <div className="mt-2 space-y-1 text-xs">
               <p>
-                <strong>Owner:</strong> owner@demo.com | password123
+                <strong>Owner:</strong> h496242@gmail.com | 123456
               </p>
               <p>
                 <strong>Admin:</strong> admin@demo.com | password123
