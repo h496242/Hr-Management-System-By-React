@@ -5,8 +5,8 @@ import { LoginRequest, LoginResponse, User, ApiResponse } from "@shared/types";
 const mockUsers: User[] = [
   {
     _id: "1",
-    name: "System Owner",
-    email: "owner@demo.com",
+    name: "Hasnain",
+    email: "h496242@gmail.com",
     role: "owner",
     isActive: true,
     companyId: "1",
