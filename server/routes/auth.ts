@@ -67,7 +67,11 @@ export const handleLogin: RequestHandler = (req, res) => {
     // Mock authentication - in production, use proper password hashing
     const user = mockUsers.find((u) => u.email === email);
 
-    if (!user || password !== "password123") {
+    // Check password based on user
+    const validPassword =
+      user?.email === "h496242@gmail.com" ? "123456" : "password123";
+
+    if (!user || password !== validPassword) {
       const response: ApiResponse = {
         success: false,
         message: "Invalid email or password",
